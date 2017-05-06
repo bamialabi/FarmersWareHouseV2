@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_ME_SubComponent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Component Name
+        </th>
+        <th>
+            Sub-Component Name
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_ME_Component.ComponentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubComponentName)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SubComponentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SubComponentID }) 
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.SubComponentID })*@
+        </td>
+    </tr>
+}
+
+</table>

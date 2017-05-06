@@ -1,0 +1,128 @@
+﻿@model Core.DataAccess.tbl_LK_Farmer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Farmer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmActivity.FarmerActivityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmActivity.FarmerActivityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmList.FarmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmList.FarmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmProduct.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmProduct.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmSize.FarmSizeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmSize.FarmSizeDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmValueChain.ValueChainName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmValueChain.ValueChainName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_State.StateName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

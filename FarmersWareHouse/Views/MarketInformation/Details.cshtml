@@ -1,0 +1,91 @@
+﻿@model Core.DataAccess.tbl_MarketInformation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Market Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+         Product Description 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>
+             Quantity 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityForSale)
+        </dd>
+
+        <dt>
+             Price 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            Avalability Status 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvalabilityStatus)
+        </dd>
+
+        
+        <dt>
+            Marketer 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_Marketer.MarketerName)
+        </dd>
+
+        <dt>
+             Market  
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketList.MarketListName)
+        </dd>
+
+        <dt>
+              Product 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketProduct.ProductName)
+        </dd>
+
+        <dt>
+            Unit Of Measure  
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketUnitOfMeaure.UnitOfMeasureName)
+        </dd>
+
+        <dt>
+             State 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_State.StateName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MarketInfoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

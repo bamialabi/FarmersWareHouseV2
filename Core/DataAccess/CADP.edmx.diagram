@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31667b469e9249eba071a721e2aa1998" Name="Diagram1">
+        <EntityTypeShape EntityType="CADPModel.ArtWork" Width="1.5" PointX="8.25" PointY="24.625" />
+        <EntityTypeShape EntityType="CADPModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CADPModel.tbl_FarmAcquaculture" Width="1.5" PointX="10.5" PointY="20" />
+        <EntityTypeShape EntityType="CADPModel.TBL_FarmPoulty" Width="1.5" PointX="10.5" PointY="30" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmActivity" Width="1.5" PointX="3" PointY="17.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_Farmer" Width="1.5" PointX="5.25" PointY="23.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmerBenefit" Width="1.5" PointX="7.5" PointY="19.625" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmerCIG" Width="1.5" PointX="3" PointY="24" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmerProduction" Width="1.5" PointX="10.5" PointY="24.25" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmerProductionSeason" Width="1.5" PointX="8.25" PointY="16" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmList" Width="1.5" PointX="3" PointY="29.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmProduct" Width="1.5" PointX="3" PointY="32.625" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmSize" Width="1.5" PointX="3" PointY="20.875" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_FarmValueChain" Width="1.5" PointX="0.75" PointY="17.5" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_Group_type" Width="1.5" PointX="0.75" PointY="22" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_Lga" Width="1.5" PointX="3" PointY="40.875" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_Marketer" Width="1.5" PointX="7.5" PointY="31.875" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_MarketList" Width="1.5" PointX="5.25" PointY="32.125" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_MarketProduct" Width="1.5" PointX="10.5" PointY="42" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_MarketUnitOfMeaure" Width="1.5" PointX="0.75" PointY="32.875" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_ME_Component" Width="1.5" PointX="3.75" PointY="14.75" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_ME_Indicator" Width="1.5" PointX="0.75" PointY="10.125" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_ME_SubComponent" Width="1.5" PointX="6" PointY="14.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_OfferTypes" Width="1.5" PointX="10.5" PointY="39.625" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_State" Width="1.5" PointX="0.75" PointY="24.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_LK_Year" Width="1.5" PointX="0.75" PointY="29.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_MarketInformation" Width="1.5" PointX="12.75" PointY="31.5" />
+        <EntityTypeShape EntityType="CADPModel.tbl_MarketPrice" Width="1.5" PointX="9.75" PointY="33.75" />
+        <EntityTypeShape EntityType="CADPModel.tbl_ME_Baseline" Width="1.5" PointX="13.25" PointY="25" />
+        <EntityTypeShape EntityType="CADPModel.tbl_ME_LK_IndicatorRegister" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="CADPModel.tbl_ME_RegisterIndicatorAchievement" Width="1.5" PointX="5.25" PointY="18.25" />
+        <EntityTypeShape EntityType="CADPModel.tbl_ME_RegisterIndicatorTarget" Width="1.5" PointX="13.25" PointY="20.375" />
+        <EntityTypeShape EntityType="CADPModel.tbl_MktOfficer" Width="1.5" PointX="7.5" PointY="37" />
+        <AssociationConnector Association="CADPModel.FK_ArtWork_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_ArtWork_tbl_LK_ME_SubComponent" />
+        <AssociationConnector Association="CADPModel.FK_ArtWork_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_FarmAcquaculture_tbl_LK_Farmer" />
+        <AssociationConnector Association="CADPModel.FK_tbl_FarmAcquaculture_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_tbl_FarmAcquaculture_tbl_LK_FarmProduct" />
+        <AssociationConnector Association="CADPModel.FK_TBL_FarmFish_tbl_LK_Farmer" />
+        <AssociationConnector Association="CADPModel.FK_TBL_FarmFish_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_TBL_FarmPoulty_tbl_LK_FarmProduct" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmActivity_tbl_LK_FarmValueChain" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmActivity" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmProduct_tbl_LK_FarmActivity" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmList1" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmProduct" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmSize" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_FarmValueChain" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Farmer_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerBenefit_tbl_LK_Farmer" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerProduction_tbl_LK_Farmer" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerBenefit_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerBenefit_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerBenefit_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerCIG_tbl_LK_Group_type" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerCIG_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerCIG_tbl_LK_Year1" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerProduction_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_Baseline_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorAchievement_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorTarget_tbl_LK_FarmerCIG" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerProduction_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerProduction_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmerProduction_tbl_LK_Year" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorAchievement_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorTarget_tbl_LK_FarmerProductionSeason" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_FarmProduct_tbl_LK_MarketUnitOfMeaure" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Lga_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Marketer_tbl_LK_Lga" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_MarketList_tbl_LK_Lga" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_Lga" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_Lga" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Marketer_tbl_LK_MarketList" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_Marketer_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_MarketerTable" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_Marketer" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_MarketList_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_MarketList" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_MarketList" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_MarketProduct_tbl_LK_MarketUnitOfMeaure" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_MarketProduct" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_MarketProduct" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_MarketUnitOfMeaure" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_MarketUnitOfMeaure" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_LK_IndicatorRegister_tbl_LK_MarketUnitOfMeaure" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_LK_IndicatorRegister_tbl_LK_MarketUnitOfMeaure1" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_ME_SubComponent_tbl_LK_ME_Component" />
+        <AssociationConnector Association="CADPModel.FK_tbl_LK_ME_Indicator_tbl_LK_ME_SubComponent" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_LK_IndicatorRegister_tbl_LK_ME_Indicator" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_LK_IndicatorRegister_tbl_LK_ME_SubComponent" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_LK_IndicatorRegister_tbl_LK_ME_SubComponent1" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_OfferTypes" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketInformation_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_Baseline_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorTarget_tbl_LK_State" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorAchievement_tbl_LK_Year" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorTarget_tbl_LK_Year" />
+        <AssociationConnector Association="CADPModel.FK_tbl_MarketPrice_tbl_MktOfficer" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_Baseline_tbl_ME_LK_IndicatorRegister" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorAchievement_tbl_ME_LK_IndicatorRegister" />
+        <AssociationConnector Association="CADPModel.FK_tbl_ME_RegisterIndicatorTarget_tbl_ME_LK_IndicatorRegister" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

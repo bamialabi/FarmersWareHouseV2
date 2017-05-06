@@ -1,0 +1,104 @@
+﻿@model Core.DataAccess.tbl_MarketInformation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Market Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityForSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityForSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvalabilityStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvalabilityStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_Lga.LgaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_Lga.LgaName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_Marketer.MarketerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_Marketer.MarketerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_MarketList.MarketListName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketList.MarketListName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_MarketProduct.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketProduct.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_MarketUnitOfMeaure.UnitOfMeasureName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_MarketUnitOfMeaure.UnitOfMeasureName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_State.StateName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

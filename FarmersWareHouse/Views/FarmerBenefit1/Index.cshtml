@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_FarmerBenefit>
+
+@{
+    ViewBag.Title = "Benefit Management";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            Farmer
+        </th>
+         
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_Farmer.FarmerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmerCIG.CIGName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_State.StateName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FarmerBenefitID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FarmerBenefitID })  
+        </td>
+    </tr>
+}
+
+</table>

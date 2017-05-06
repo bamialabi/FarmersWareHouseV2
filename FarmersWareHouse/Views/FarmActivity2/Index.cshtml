@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_FarmActivity>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FarmerActivityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmValueChain.ValueChainName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FarmerActivityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmValueChain.ValueChainName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FarmActivityID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FarmActivityID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FarmActivityID })
+        </td>
+    </tr>
+}
+
+</table>

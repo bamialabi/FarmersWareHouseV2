@@ -1,0 +1,10 @@
+﻿@model FarmersWareHouse.ViewModel.FileContentResult
+@{
+    ViewBag.Title = "GetThumbnailImage";
+}
+
+<h2>Thumbnail Image </h2>
+
+<td>
+    <img src="@Url.Action("GetThumbnailImage", "Artwork", new { Model.fileID })" alt="Artwork Image" />
+</td>

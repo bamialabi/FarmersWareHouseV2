@@ -1,0 +1,74 @@
+﻿@model Core.DataAccess.tbl_LK_FarmerBenefit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_LK_FarmerBenefit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateIssued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateIssued)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_Farmer.FarmerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_Farmer.FarmerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_State.StateName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmerBenefitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

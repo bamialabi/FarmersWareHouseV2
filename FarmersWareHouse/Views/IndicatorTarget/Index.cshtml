@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_ME_RegisterIndicatorTarget>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Indicator target Listing (Overview)</h2>
+
+<p>
+    @Html.ActionLink("Add New Target", "AddTargetIndicator", null, new { @class = "btn btn-primary" }) &nbsp; <a href="/IndicatorTarget/ExportData" class="btn btn-info">Export</a>
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TargetData)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </th>
+        <th>
+            Year
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_ME_LK_IndicatorRegister.IndicatorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TargetData)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_LK_FarmerCIG.CIGName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_LK_Year.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tbl_ME_LK_IndicatorRegister.IndicatorName)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.TargetData)
+            </th>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TargetID }) 
+            </td>
+           
+        </tr>
+    }
+
+</table>

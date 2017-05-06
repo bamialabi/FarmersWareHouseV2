@@ -1,0 +1,73 @@
+﻿@model  FarmersWareHouse.Controllers.FarmRecordController.Salem
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "FarmRecord", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+<div class="row">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Production Season</label>
+        <div class="col-md-2">
+            @Html.DropDownList("ProductionSeasonID", null, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <label class="control-label col-md-2">State </label>
+        <div class="col-md-2">
+            
+            @Html.DropDownList("StateID", null, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <label class="control-label col-md-2">CIG</label>
+        <div class="col-md-2">
+            
+            @Html.DropDownList("CIGID", null, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div class="col-lg-pull-6">
+            <input type="submit" name="submit" class="btn btn-default" value="FarmRecord" />
+            @*<input type="submit" name="submit" class="btn btn-danger" value="Process" />*@
+        </div>
+
+    </div>
+
+</div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            CIG Name 
+        </th>
+
+        <th>
+            Farmer
+        </th>
+        <th>
+             Amount 
+        </th>
+        <th>
+           Quantity Produced
+        </th>
+         
+    </tr>
+    @foreach (var items in Model.Benefits)
+    {
+
+        foreach (var p in Model.Production)
+        {
+
+            foreach (var f in Model.Famer)
+            {
+                <tr>
+                    <td>@f.tbl_LK_FarmerCIG.CIGName</td>
+                    <td>@f.FarmerName</td>
+                    <td>@items.Amount</td>
+                    <td>@p.Quantity_10_11</td>
+                </tr>
+            }
+        }
+
+    }
+</table>
+
+<hr />

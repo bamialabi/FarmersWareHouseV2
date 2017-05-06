@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_Group_type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupTypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupTypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GroupTypeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GroupTypeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GroupTypeID })
+        </td>
+    </tr>
+}
+
+</table>

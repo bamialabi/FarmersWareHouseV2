@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "AchievementListing";
+}
+@model IEnumerable<Core.DataAccess.tbl_ME_RegisterIndicatorAchievement>
+<h2>Update Achievement Data for - <strong> @Model.First().tbl_LK_FarmerCIG.CIGName </strong></h2>
+
+
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+@using (Html.BeginForm())
+{
+    <table class="table table-hover">
+        <tr>
+            <th>
+                Indicator Name
+            </th>
+            <th>
+                Base Data
+            </th>
+            <th>
+              Remarks
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.AchievementID)
+                    @Html.DisplayFor(modelItem => item.tbl_ME_LK_IndicatorRegister.IndicatorName)
+                </td>
+                <td>
+                    @Html.EditorFor(modelItem => item.AchievementData, null, new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.EditorFor(modelItem => item.Remarks, null, new { @class = "form-control" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <input type="submit" class="btn btn-danger" value="Submit Achievement Data" />
+}

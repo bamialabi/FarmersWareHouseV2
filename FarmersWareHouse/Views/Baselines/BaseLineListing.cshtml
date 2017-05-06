@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_ME_Baseline>
+
+@{
+    ViewBag.Title = "BaseLineListing";
+}
+
+<h2>BaseLine Listing</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+@using (Html.BeginForm())
+{
+    <table class="table table-hover">
+        <tr>
+            <th>
+                Indicator Name
+            </th>
+            <th>
+                Base Data
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.BaseLineID)
+                    @Html.DisplayFor(modelItem => item.tbl_ME_LK_IndicatorRegister.IndicatorName)
+                </td>
+                <td>
+                    @Html.EditorFor(modelItem => item.BaseData, null, new { @class = "form-control" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <input type="submit" class="btn btn-danger" value="Submit Base Data" />
+}

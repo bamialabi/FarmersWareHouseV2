@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_ME_RegisterIndicatorAchievement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Indicator Achievements</h2>
+
+<p>
+    @Html.ActionLink("Add Achievement", "AddAchievement")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StateID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AchievementData)
+        </th>
+       
+        @*<th>
+            @Html.DisplayNameFor(model => model.Quarter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Approved)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </th>
+     
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_ME_LK_IndicatorRegister.IndicatorName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AchievementData)
+        </td>
+       
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Quarter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Approved)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmerCIG.CIGName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmerProductionSeason.ProductionSeasonName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_ME_LK_IndicatorRegister.IndicatorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AchievementID }) 
+        </td>
+    </tr>
+}
+
+</table>

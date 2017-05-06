@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_Farmer>
+
+@{
+    ViewBag.Title = "Create";
+ 
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmActivity.FarmerActivityName)
+        </th>
+        <th>
+            CIG 
+        </th>
+        
+        <th>
+            Farm Size 
+        </th>
+        <th>
+            Value Chain 
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmActivity.FarmerActivityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmerCIG.CIGName)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmSize.FarmSizeDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_FarmValueChain.ValueChainName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_State.StateName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FarmerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FarmerID }) 
+          
+        </td>
+    </tr>
+}
+
+</table>

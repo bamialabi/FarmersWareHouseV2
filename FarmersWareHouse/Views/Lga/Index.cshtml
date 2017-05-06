@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_Lga>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           LGA Name
+        </th>
+        <th>
+           State Name 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LgaName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_State.StateName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LgaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LgaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LgaID })
+        </td>
+    </tr>
+}
+
+</table>

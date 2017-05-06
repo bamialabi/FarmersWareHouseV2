@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Reports</h2>
+@using (Html.BeginForm("BaselineList", "Baselines", FormMethod.Post))
+{
+
+    <div class="row">
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Filter</label>
+
+            <div class="col-md-2">
+                @Html.DropDownList("StateID", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("CIGID", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-md-3">
+                <input type="submit" name="submit" class="btn btn-default" value="Search" />
+                <a href="/Baselines/ExportData" class="btn btn-info">Export</a>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+
+    </div>
+    <br />
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tbl_ME_LK_IndicatorRegister.IndicatorName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CIGID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BaseData)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tbl_ME_LK_IndicatorRegister.IndicatorName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BaseLineID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.BaseLineID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BaseLineID })
+                </td>
+            </tr>
+        }
+
+    </table>
+}

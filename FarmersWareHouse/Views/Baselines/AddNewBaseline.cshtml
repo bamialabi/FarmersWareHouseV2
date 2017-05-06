@@ -1,0 +1,95 @@
+﻿@model FarmersWareHouse.ViewModel.RegisterBaseLineViewModel
+
+@{
+    ViewBag.Title = "AddNewBaseline";
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //Dropdownlist Selectedchange event
+            $("#StateID").change(function () {
+                $("#CIGID").empty();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("GetCigName")', // we are calling json method
+                    dataType: 'json',
+                    data: { id: $("#StateID").val() },
+                    success: function (response) {
+                        // states contains the JSON formatted list
+                        // of states passed from the controller
+
+                        $("#CIGID").append('<option value="' + "0" + '">' + "Select CIG" + '</option>');
+                        debugger;
+                        $.each(response, function (i, state) {
+                            $("#CIGID").append('<option value="' + response.Value + '">' + state.Text + '</option>');
+                            // here we are adding option for States
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Failed to retrieve states.' + ex);
+                    }
+                });
+                return false;
+            })
+        });
+    </script>
+}
+
+<h2>Add NewBase line</h2>
+<h2>@ViewBag.Message</h2>
+@using (Html.BeginForm("AddNewBaseline", "Baselines", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="row">
+        <hr />
+        <div class="form-group">
+            <label class="control-label col-md-2">Select Sub-Component</label>
+            <div class="col-md-2">
+                @Html.DropDownList("SubComponentID", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("StateID", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                @Html.DropDownList("CIGID", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+            <div class="col-md-3">
+                <input type="submit" name="submit" class="btn btn-default" value="Search" />
+                <input type="submit" name="submit" class="btn btn-danger" value="Process" />
+            </div>
+        </div>
+
+    </div>
+
+    <table class="table table-hover">
+        <tr>
+            <th>
+                Indicator Register
+            </th>
+            <th>
+                Is Summable (True/False)
+            </th>
+            <th>
+                Unit Of Measurement
+            </th>
+        </tr>
+
+        @foreach (var item in Model.IndicatorRegister)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndicatorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Summable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tbl_LK_MarketUnitOfMeaure1.UnitOfMeasureName)
+                </td>
+                <td>
+
+            </tr>
+        }
+
+    </table>
+}
+

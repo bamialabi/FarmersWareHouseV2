@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Core.DataAccess.tbl_LK_ME_Indicator>
+<h2>
+    Indicators Listing - <a href="/Settings/AddIndicator" class="btn btn-primary">Add New</a>
+</h2>
+
+<table class="table">
+    <tr>
+        <th>
+           Indicator Name)
+        </th>
+        <th>
+       Sub ComponentName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndicatorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_LK_ME_SubComponent.SubComponentName)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteIndicator", new { id = item.IndicatorsID })
+        </td>
+    </tr>
+}
+
+</table>

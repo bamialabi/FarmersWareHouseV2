@@ -1,0 +1,49 @@
+﻿@model FarmersWareHouse.ViewModel.MarketerModel
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<h2>Index</h2>
+
+<table>
+    <tr>
+       <td>
+           <label>State</label>
+       </td>
+        <td>@Html.DropDownListFor(x => x.LK_StateName, Model.LK_StateName, "----Select----", new { @id = "ddlState" });
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label>LGA</label>
+
+        </td>
+        <td id="Lga">
+@Html.DropDownListFor(X => X.LK_LgaName, new List<SelectListItem>(), "----Select----", new { @id = "ddlLga" });
+        </td>
+
+    </tr>
+
+</table>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#ddlState').change(function () {
+            $.ajax({
+                type: "post",
+                url: "/MKTDropDownListController/index",
+                data: { id: $('#ddlState').val() },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    var lga = "<select StateID='ddlLga'>";
+                    lga = lga + '<option value="">--Select--</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        lga = lga + '<option value=' + data[i].Value + '>' + data[i].Text + '</option>';
+                    }
+                    lga = lga + '</select>';
+                    $('#Lga').html(lga);
+                }
+            });
+        });
+    });
+</script>  

@@ -1,0 +1,122 @@
+﻿@model Core.DataAccess.tbl_LK_Farmer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_LK_Farmer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmActivity.FarmerActivityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmActivity.FarmerActivityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmerCIG.CIGName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmList.FarmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmList.FarmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmProduct.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmProduct.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmSize.FarmSizeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmSize.FarmSizeDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_FarmValueChain.ValueChainName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_FarmValueChain.ValueChainName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_LK_State.StateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_LK_State.StateName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FarmerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
